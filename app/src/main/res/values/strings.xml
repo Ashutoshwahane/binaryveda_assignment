@@ -4,4 +4,8 @@
     <string name="steve_donuto_gmail_com">Steve_Donuto@gmail.com</string>
     <string name="password">HaveYou8tTod6y</string>
     <string name="term_and_policy">By clicking Create account, I agree to SnackOverflow’s TOS and Privacy Policy.</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit">Lorem ipsum dolor sit amet, consectetur\n adipiscing elit</string>
+    <string name="register">register</string>
+    <string name="lorem_ipsum_n_is_used">lorem ipsum \n is used</string>
+    <string name="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</string>
 </resources>

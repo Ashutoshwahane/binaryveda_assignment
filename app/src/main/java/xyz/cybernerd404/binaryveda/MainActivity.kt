@@ -11,15 +11,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val intent = intent.extras
-        val email = intent?.getString("email")
-        val name = email?.takeWhile{ it != '@' }
-
-        binding.welcomeTitleTV.text = "Welcome $name"
-
-        binding.logoutTV.setOnClickListener {
-            finish()
-        }
 
     }
 }

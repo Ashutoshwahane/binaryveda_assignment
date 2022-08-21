@@ -15,15 +15,13 @@ class RegisterActivity : AppCompatActivity() {
 
         binding.apply {
             registerTV.setOnClickListener {
-                if (emailET.text.isNotEmpty() && passwordET.text.isNotEmpty()){
-                    Intent(this@RegisterActivity, MainActivity::class.java).apply {
-                        putExtra("email", emailET.text.toString())
-                        startActivity(this)
-                    }
-                }else{
-                    Toast.makeText(this@RegisterActivity, "Please enter the credentials", Toast.LENGTH_SHORT).show()
+
+                Intent(this@RegisterActivity, MainActivity::class.java).apply {
+                    startActivity(this)
                 }
             }
+
+
         }
     }
 }
