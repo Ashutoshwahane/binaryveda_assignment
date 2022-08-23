@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -88,7 +88,6 @@
             android:layout_marginStart="49dp"
             android:layout_marginTop="33dp"
             android:layout_marginEnd="49dp"
-            android:drawableStart="@drawable/ic_arrow_blue"
             android:fontFamily="@font/barlow_extralight"
             android:text="track my application"
             android:textAlignment="center"
@@ -97,7 +96,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/collectionTV" />
+            app:layout_constraintTop_toBottomOf="@id/collectionTV"
+            app:drawableStartCompat="@drawable/ic_arrow_blue" />
 
 
         <LinearLayout
@@ -107,6 +107,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="60dp"
             android:orientation="vertical"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/trackmyapplicationTV">
 
@@ -262,6 +263,17 @@
 
         </LinearLayout>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp"
+            android:id="@+id/dataRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trackmyapplicationTV" />
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/socialMediaLayout"
             android:layout_width="match_parent"
@@ -269,7 +281,7 @@
             android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dataLinearLayout">
+            app:layout_constraintTop_toBottomOf="@id/dataRV">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -306,73 +318,73 @@
             app:layout_constraintTop_toBottomOf="@id/line1" />
 
         <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/logo2IV"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
-            android:orientation="vertical">
+            app:layout_constraintTop_toBottomOf="@id/logo2IV">
 
             <TextView
-                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="About us"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:text="About us"/>
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Team"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:text="Team"/>
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Reach us"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:text="Reach us"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/footerLayout"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/logo2IV"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            android:orientation="vertical">
+            app:layout_constraintTop_toBottomOf="@id/logo2IV">
 
             <TextView
-                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Affilation"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:text="Affilation"/>
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Disclaimers"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:text="Disclaimers"/>
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Privacy policy"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:text="Privacy policy"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -390,25 +402,23 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/line2"
-            android:orientation="horizontal"
             android:gravity="center"
-            >
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/line2">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_copy"/>
+                android:src="@drawable/ic_copy" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" Content Copyright reserved."
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

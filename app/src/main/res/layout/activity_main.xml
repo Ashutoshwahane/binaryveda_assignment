@@ -1,332 +1,432 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/logoIV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:src="@drawable/ic_agc_logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/hamburgerIV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/ic_hamburger_ic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/plusIV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="30dp"
-        android:src="@drawable/ic_plus_ic"
-        app:layout_constraintEnd_toStartOf="@id/hamburgerIV"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <ImageView
-        android:id="@+id/profileIV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/round_background"
-        android:padding="4dp"
-        android:src="@drawable/ic_profile_icon"
-        app:layout_constraintEnd_toStartOf="@id/plusIV"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/uploadTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="69dp"
-        android:fontFamily="@font/barlow_extralight"
-        android:text="Upload"
-        android:textColor="#2979FF"
-        android:textSize="14sp"
-        app:drawableTopCompat="@drawable/ic_share_ic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profileIV" />
-
-    <ImageView
-        android:id="@+id/johnProfileIV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/john_profile"
-        app:layout_constraintEnd_toStartOf="@id/editIV"
-        app:layout_constraintStart_toEndOf="@id/uploadTV"
-        app:layout_constraintTop_toBottomOf="@id/profileIV" />
-
-    <TextView
-        android:id="@+id/editIV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="69dp"
-        android:layout_marginEnd="51dp"
-        android:fontFamily="@font/barlow_extralight"
-        android:text="Edit"
-        android:textColor="#2979FF"
-        android:textSize="14sp"
-        app:drawableTopCompat="@drawable/ic_edit_ic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profileIV" />
-
-
-    <TextView
-        android:id="@+id/profileNameTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:fontFamily="@font/barlow_extralight"
-        android:text="john.doe"
-        android:textColor="@color/black"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/editIV"
-        app:layout_constraintStart_toEndOf="@id/uploadTV"
-        app:layout_constraintTop_toBottomOf="@id/johnProfileIV" />
-
-
-    <TextView
-        android:id="@+id/dashboardTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/barlow_extralight"
-        android:padding="4dp"
-        android:text="My dashboard"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profileNameTV" />
-
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="24dp"
-        android:shadowColor="#00E676"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profileNameTV" />
-
-    <View
-        android:id="@+id/line1"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_margin="10dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dashboardTV" />
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/likeLinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/line1">
+        <ImageView
+            android:id="@+id/logoIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:src="@drawable/ic_agc_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/hamburgerIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_hamburger_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/plusIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_plus_ic"
+            app:layout_constraintEnd_toStartOf="@id/hamburgerIV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/profileIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/round_background"
+            android:padding="4dp"
+            android:src="@drawable/ic_profile_icon"
+            app:layout_constraintEnd_toStartOf="@id/plusIV"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
+            android:id="@+id/uploadTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="51dp"
+            android:layout_marginTop="69dp"
+            android:fontFamily="@font/barlow_extralight"
+            android:text="Upload"
+            android:textColor="#2979FF"
+            android:textSize="14sp"
+            app:drawableTopCompat="@drawable/ic_share_ic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileIV" />
+
+        <ImageView
+            android:id="@+id/johnProfileIV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:drawablePadding="5dp"
-            android:fontFamily="@font/barlow_extralight"
-            android:padding="5dp"
-            android:text="120"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:drawableStartCompat="@drawable/ic_heart_ic" />
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/john_profile"
+            app:layout_constraintEnd_toStartOf="@id/editIV"
+            app:layout_constraintStart_toEndOf="@id/uploadTV"
+            app:layout_constraintTop_toBottomOf="@id/profileIV" />
 
         <TextView
+            android:id="@+id/editIV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:drawablePadding="5dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginEnd="51dp"
             android:fontFamily="@font/barlow_extralight"
-            android:padding="5dp"
-            android:text="43K"
-            android:textColor="@color/black"
+            android:text="Edit"
+            android:textColor="#2979FF"
             android:textSize="14sp"
-            app:drawableStartCompat="@drawable/ic_push_ic" />
+            app:drawableTopCompat="@drawable/ic_edit_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileIV" />
+
 
         <TextView
+            android:id="@+id/profileNameTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:drawablePadding="5dp"
+            android:layout_marginEnd="24dp"
             android:fontFamily="@font/barlow_extralight"
-            android:padding="5dp"
-            android:text="2.3K"
+            android:text="john.doe"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/editIV"
+            app:layout_constraintStart_toEndOf="@id/uploadTV"
+            app:layout_constraintTop_toBottomOf="@id/johnProfileIV" />
+
+
+        <TextView
+            android:id="@+id/dashboardTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/barlow_extralight"
+            android:padding="4dp"
+            android:text="My dashboard"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:drawableStartCompat="@drawable/ic_share_like_ic" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileNameTV" />
 
-    </LinearLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="24dp"
+            android:shadowColor="#00E676"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileNameTV" />
 
-
-    <FrameLayout
-        android:id="@+id/paletteLinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_margin="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/likeLinearLayout">
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="10dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dashboardTV" />
 
         <LinearLayout
+            android:id="@+id/followerLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal"
-            android:weightSum="1">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line1">
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:background="#5A2929" />
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:background="#C1092D" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.3K"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:background="#F50057" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Followers"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:background="#FF3D00" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:background="#FFC400" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Artworks"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exhibitions"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+
+
+            </LinearLayout>
+
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="12dp"
-            android:fontFamily="@font/barlow_extralight"
-            android:gravity="center_vertical"
-            android:text="palette"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
 
-    </FrameLayout>
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/followerLayout" />
 
-
-    <LinearLayout
-        android:id="@+id/tabView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:visibility="gone"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/paletteLinearLayout">
-
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/likeLinearLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_weight="1"
-            android:drawablePadding="5dp"
-            android:fontFamily="@font/barlow_extralight"
-            android:padding="5dp"
-            android:text="120"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:drawableStartCompat="@drawable/ic_share_black_ic" />
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line2">
 
-        <TextView
-            android:layout_width="wrap_content"
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/barlow_extralight"
+                android:padding="5dp"
+                android:text="120"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_heart_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/barlow_extralight"
+                android:padding="5dp"
+                android:text="43K"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_push_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/barlow_extralight"
+                android:padding="5dp"
+                android:text="2.3K"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_share_like_ic" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/paletteLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/likeLinearLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="#5A2929" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="#C1092D" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="#F50057" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="#FF3D00" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="#FFC400" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/barlow_extralight"
+                android:gravity="center_vertical"
+                android:text="palette"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tabView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_weight="1"
-            android:drawablePadding="5dp"
-            android:fontFamily="@font/barlow_extralight"
-            android:padding="5dp"
-            android:text="43K"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:drawableStartCompat="@drawable/ic_exhibition_ic" />
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paletteLinearLayout">
 
-        <TextView
-            android:layout_width="wrap_content"
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/barlow_extralight"
+                android:padding="5dp"
+                android:text="120"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_share_black_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/barlow_extralight"
+                android:padding="5dp"
+                android:text="43K"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_exhibition_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/barlow_extralight"
+                android:padding="5dp"
+                android:text="2.3K"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_revenue_ic" />
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_weight="1"
-            android:drawablePadding="5dp"
-            android:fontFamily="@font/barlow_extralight"
-            android:padding="5dp"
-            android:text="2.3K"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:drawableStartCompat="@drawable/ic_revenue_ic" />
-
-    </LinearLayout>
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="viewStart"
-        app:tabIndicatorColor="#FFC400"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/paletteLinearLayout"
-        app:tabIndicatorHeight="1dp"/>
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paletteLinearLayout"
+            app:tabIndicatorColor="#FFC400"
+            app:tabIndicatorHeight="1dp" />
 
 
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>
